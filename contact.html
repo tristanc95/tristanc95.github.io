@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Tristan C">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit = no">
+  <title> Tristan C. - Captcha Test </title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+  <body class="bg-info">
+    <h1 class="text-center text-dark p-2"> Contact Us </h1>
+    <h3 class="text-center text-dark p-1"> Thanks for contacting us! <br> Please fill out the form below and we will get in touch with you as soon as possible. </h3>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class = "col-lg-5 bg-light rounded mt-5">
+
+          <form action = "contact.php" method = "post">
+            <div class= "elem-group">
+              <label for= "name" class="elem-group"> <h5 class = "text-center text-dark p-2"> Name: </h5></label>
+              <br>
+              <input type= "text" id="name" name="Visitor_Name" placeholder="My Name Here" required class="form-control">
+            </div>
+            <br>
+
+            <div class = "elem-group">
+              <label for= "email" class="elem-group"><h5 class = "text-center text-dark p-2"> E-Mail: </h5> </label>
+              <br>
+              <input type= "email" id="email" name="Visitor_Email" placeholder="Insert Your Email" required class="form-control">
+            </div>
+            <br>
+
+            <div class = "elem-group">
+              <label for="title" class="elem-group"><h5 class = "text-center text-dark p-2">Reason for Contacting Us</h5></label>
+              <br>
+              <input type="text" id="title" name="email_title" required placeholder="Subject Line Here" class="form-control">
+            </div>
+            <br>
+
+            <div class = "elem-group">
+              <label for="message" class="elem-group"><h5 class = "text-center text-dark p-2">Write your Message</h5></label>
+              <br>
+              <textarea id="message" name="visitor_message" placeholder="Type your body message here." required class="form-control"> </textarea>
+            </div>
+            <br>
+
+            <div class = "elem-group">
+              <label for="captcha" class="elem-group"> <h5 class = "text-center text-dark p-2">Solve the Captcha before submitting. Please refresh the page if you have trouble seeing.</h5></label>
+              <br>
+              <img src="captcha2.php" alt="CAPTCHA" class="captcha-image justify-content-center" ><i class="fas fa-redo refresh-captcha"></i>
+              <br>
+              <br>
+              <input type="text" id="captcha" name="captcha_challenge" pattern="[A-Z]{6}" class="form-control">
+            </div>
+            <br>
+            <button type="submit" class="btn btn-danger btn-block"> Send Message </button>
+            <br>
+            <br>
+          </form>
+      </div>
+    </div>
+  </div>
+
+  </body>
+</html>
