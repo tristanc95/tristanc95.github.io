@@ -80,6 +80,11 @@ body {
   100% {scale: 0.5}
 }
 
+@keyframes Begone {
+  0% {scale:1}
+  100% {scale: 0}
+}
+
 a:hover{
 	color: var(--clr-yellow);
 	transition: 0.7s ease;
@@ -157,7 +162,10 @@ img{
 }
 
 .portbox{
-  position:relative;
+  position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
   width: 22.5em;
   animation: fadeIn 3s;
 }
@@ -265,8 +273,14 @@ span{
   opacity: 1;
 }
 
+.portbox:hover + footer{
+  animation: Begone 500ms ease;
+  animation-fill-mode: forwards;
+}
+
 footer{
-  position: flex;
+  position: fixed;
+  top: 85%;
 }
 
 .homeaudio{
