@@ -102,10 +102,18 @@ a:visited:hover{
   text-align: center;
 }
 
-.stats_info, .grad_info{
+.title{
+  color: var(--clr-yellow);
+  font-family: 'WebNEC';
+  font-weight: bold;
+  text-align: center;
+}
+
+.grad_info{
   color: var(--clr-pinkish);
   font-family: 'Sparrow';
   font-weight: bold;
+  text-align: center;
 }
 
 .about_me{
@@ -175,10 +183,20 @@ img{
 }
 
 .indepth{
-  margin: 1.75em 0;
+  margin: 1.01em 0;
   columns: 2;
   column-rule: 2px solid rgba(255,255,.55,.25);
   text-align: center;
+}
+
+.jobs{
+  text-align: center;
+}
+
+.job_info{
+  color: var(--clr-pinkish);
+  font-family: 'Sparrow';
+  font-weight: bold;
 }
 
 .social_media{
@@ -188,7 +206,12 @@ img{
 }
 
 span{
-  font-size: .85rem;
+  font-size: .75rem;
+  display: block;
+}
+
+.job_location, .job_date{
+  font-size: .45rem;
   display: block;
 }
 
@@ -233,9 +256,17 @@ span{
   transform: translateY(-42%) scale(.75);
 }
 
+.portbox:hover .about_me{
+  transform: scale(0);
+}
+
 .portbox:hover .behind{
   transition: opacity 400ms linear;
   opacity: 1;
+}
+
+footer{
+  position: flex;
 }
 
 .homeaudio{
