@@ -339,11 +339,12 @@ footer{
   left: 0;
   right: 0;
   width: 100%;
+  pointer-events: auto;
 }
 
 footer a{
   pointer-events: auto;
-  cursor: cell;
+  cursor: none;
 }
 
 .homeaudio{

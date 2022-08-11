@@ -86,7 +86,7 @@
 <script>
 const cursorRound = document.querySelector('.cursor_round')
 const moveCursor = (e)=> {
-  const mouseYMove = e.clientY + 16;
+  const mouseYMove = e.clientY - 15;
   const mouseXMove = e.clientX - 15;
 
   cursorRound.style.transform = `translate3d(${mouseXMove}px, ${mouseYMove}px, 0)`;
