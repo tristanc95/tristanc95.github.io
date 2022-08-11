@@ -14,7 +14,7 @@
   --clr-black: #0a0a0a;
   --clr-gradient: linear-gradient(110deg, rgba(2,1,25,1) 0%, rgba(40,66,47,1) 30%, rgba(9,79,46,1) 55%, rgba(7,77,64,1) 83%, rgba(13,1,14,1) 100%);
   --br: 1.5em;
-  --clr-gradient2: linear-gradient(110deg, rgba(2,172,173,1) 0%, rgba(210,141,0,1) 30%, rgba(119,8,8,1) 55%, rgba(150,177,172,1) 83%, rgba(182,0,198,1) 100%);
+  --clr-gradient2: linear-gradient(110deg, rgba(41,43,43,1) 0%, rgba(96,31,87,0.7931373232886905) 36%, rgba(53,16,61,1) 69%, rgba(32,33,33,1) 83%, rgba(0,0,0,1) 100%);
 }
 
 
@@ -47,13 +47,33 @@
 
 /*Actual CSS :) */
 
-body {
+body{
+  cursor: none;
+}
+
+.cursor_round{
+  width: 10px;
+  height: 10px;
+  border: 3px solid white;
+  border-radius: 50%;
+  z-index: 4;
+}
+
+.coloring{
+  display: grid;
+  place-items: center;
   min-height: 100vh;
   display: grid;
   place-items: center;
-  background-image: var(--clr-gradient);
+  background-image: var(--clr-gradient2);
   background-size: 400%;
-  animation: bg-move 30s infinite alternate;
+  pointer-events: none;
+  z-index: 9;
+  animation: fadeIn 2s linear, bg-move 25s infinite alternate;
+}
+
+.coloring:hover{
+  background-image: var(--clr-gradient);
 }
 
 /*BG anim */
@@ -88,11 +108,13 @@ body {
 a:hover{
 	color: var(--clr-yellow);
 	transition: 0.7s ease;
+  cursor: none;
 }
 
 a:visited:hover{
   color: var(--clr-yellow);
 	transition: 0.7s ease;
+  cursor: none;
 }
 
 .myface{
@@ -125,6 +147,13 @@ a:visited:hover{
   color: var(--clr-yellow);
   font-family: 'Olive';
   text-align: center;
+}
+
+.about_myself{
+  color: var(--clr-yellow);
+  font-family: 'Sparrow';
+  text-align: center;
+  display: flex;
 }
 
 .linkedin, .email {
@@ -167,6 +196,7 @@ img{
 	left: 50%;
 	transform: translate(-50%, -50%);
   width: 22.5em;
+  pointer-events: auto;
   animation: fadeIn 3s;
 }
 
@@ -182,7 +212,7 @@ img{
 .behind{
   opacity: 0;
   position: absolute;
-  bottom: -37%;
+  bottom: -50%;
   left: 0;
   right: 0;
   display: flex;
@@ -195,6 +225,20 @@ img{
   columns: 2;
   column-rule: 2px solid rgba(255,255,.55,.25);
   text-align: center;
+}
+
+.my_company{
+  color: var(--clr-yellow);
+  text-align: center;
+  font-family: 'WebNEC';
+  font-weight: bold;
+}
+
+.comp_image{
+  height: 80%;
+  width: 60%;
+  margin: 0 auto;
+  display: block;
 }
 
 .jobs{
@@ -254,18 +298,29 @@ span{
   border-radius: 1em;
 }
 
+/* All the Portbox Dealings */
+
 .portbox:hover .bg{
-  transform: scale(1.75);
+  transform: scale(2.25);
   transition: opacity 250ms cubic-bezier(.21, 1.00, .90, 1.01);
   opacity: 1;
 }
 
 .portbox:hover .front{
-  transform: translateY(-42%) scale(.75);
+  transform: translateY(-69%) scale(.75);
+}
+
+.portbox:hover .about_myself{
+  transform: translateY(-90%);
 }
 
 .portbox:hover .about_me{
   transform: scale(0);
+}
+
+.portbox:hover .my_name{
+  animation: Begone 500ms ease;
+  animation-fill-mode: forwards;
 }
 
 .portbox:hover .behind{
@@ -280,7 +335,15 @@ span{
 
 footer{
   position: fixed;
-  top: 85%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+footer a{
+  pointer-events: auto;
+  cursor: cell;
 }
 
 .homeaudio{

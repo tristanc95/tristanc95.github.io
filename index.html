@@ -9,16 +9,22 @@
   </head>
 
   <body>
+  <div class = "cursor_round"> </div>
+  <div class="cursor_point"> </div>
+  <div class = 'coloring'>
+
     <div class="portbox">
       <div class="front">
-        <img class="myface" src="img/me.jpg" alt="">
+        <img class="myface" src="img/TristanProfile.jpg" alt="">
         <h3 class="my_name">Tristan Conde</h3>
           <div class="whoami">
             <p class="about_me"> ◔ | 26 | M | Vid Maker | Music Maker | Techie at Heart ◕ </p>
           </div>
       </div>
+
       <div class="behind">
-        <h3 class="my_name"> I've graduated with a... </h3>
+        <div class="about_myself"> <h3 class="thisisme"> So here's a little bit about me... </h3> </div>
+        <h3 class="my_company"> I've graduated with a... </h3>
         <div class="indepth">
           <p class="grad_info"> BBA in Computer Information Systems <span> (Aug 2014 - Dec 2017) </span>
             <br>
@@ -26,8 +32,12 @@
             <br>
             MSIS in Information Science (Concetration in Information Systems) <span> (Aug 2020 - May 2022) </span> </br> </p>
         </div>
+        <div class = "current_company">
+          <h3 class = "my_company"> Current Company: </h3>
+          <img class ="comp_image" src="img/trello.png" alt="">
+        </div>
         <div class="jobs">
-          <h3 class="title"> I've worked as a... </h3>
+          <h3 class="title"> I've worked previously as a... </h3>
           <p class="job_info"> Software Systems Analyst </p>
           <span></span>
           <p class="job_info"> IT Specialist </p>
@@ -49,26 +59,45 @@
           </div>
         </div>
       </div>
+
       <div class="bg">
       </div>
+
     </div>
+
+  </div>
+
   </body>
-<footer class="ending">
-  <br>
-  Graciously hosted on <a href="https://github.com/tristanc95" target="_blank">Github.</a>
-  <br>
-  Special thanks to <a href="https://www.youtube.com/channel/UCJZv4d5rbIKd4QHMPkcABCw" target="_blank">Kevin Powell</a> and his tutorials for helping me make the website!
-  <br>
-  <br>
-  <p class="update"> Last Updated May 16, 2022 </p>
-  <p class="update"> Music: Angel Falls by kfaraday </p>
-  <audio class="homeaudio" controls autoplay id="bgAudio" loop>
-    <source src="audio/angel.mp3" type="audio/mpeg">
-  </audio>
-</footer>
+
+  <footer class="ending">
+    <br>
+    Graciously hosted on <a href="https://github.com/tristanc95" target="_blank">Github.</a>
+    <br>
+    Special thanks to <a href="https://www.youtube.com/channel/UCJZv4d5rbIKd4QHMPkcABCw" target="_blank">Kevin Powell</a> and his tutorials for helping me make the website!
+    <br>
+    <br>
+    <p class="update"> Last Updated August 11, 2022 </p>
+    <p class="update"> Music: is it really a dream if i feel this way when im awake by <a href="https://soundcloud.com/telebasher"> telebasher </a> </p>
+    <audio class="homeaudio" controls autoplay id="bgAudio" loop>
+      <source src="audio/dreams.mp3" type="audio/mpeg">
+    </audio>
+  </footer>
+
+<script>
+const cursorRound = document.querySelector('.cursor_round')
+const moveCursor = (e)=> {
+  const mouseYMove = e.clientY + 16;
+  const mouseXMove = e.clientX - 15;
+
+  cursorRound.style.transform = `translate3d(${mouseXMove}px, ${mouseYMove}px, 0)`;
+}
+
+window.addEventListener('mousemove', moveCursor)
+</script>
 
 <script>
   var audio = document.getElementById("bgAudio");
   audio.volume = 0.15;
 </script>
+
 </html>
