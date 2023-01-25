@@ -93,6 +93,16 @@
   100% {scale: 0}
 }
 
+@keyframes SlideDown{
+  0% {transform: translateY(0%);}
+  100% {transform: translateY(900%);}
+}
+
+@keyframes SlideIn{
+  0% {transform: translateY(900%);}
+  100% {transform: translateY(0%);}
+}
+
 a:hover{
 	color: var(--clr-yellow);
 	transition: 0.7s ease;
@@ -157,7 +167,7 @@ a:visited:hover{
 .update{
   font-size: 0.75em;
   text-align: center;
-  animation: fadeIn 7s;
+  animation: fadeIn 400ms ease, SlideIn 2s ease;
 }
 
 h1, h2, h3, h4, h5, h6, p{
@@ -190,7 +200,7 @@ img{
 .behind{
   opacity: 0;
   position: absolute;
-  bottom: -50%;
+  bottom: -45%;
   left: 0;
   right: 0;
   display: flex;
@@ -286,9 +296,19 @@ span{
   text-align: center;
 }
 
+.ending{
+    pointer-events: auto;  
+    color: var(--clr-yellow);
+    font-family: 'Sparrow';
+    animation: fadeIn 5s;
+    text-align: center;
+}
+
 footer{
   position: fixed;
-  bottom: 100;
+  text-align: center;
+  margin: 2em;
+  bottom: 0;
   left: 0;
   right: 0;
   width: 100%;
@@ -325,8 +345,12 @@ footer{
 }
 
 .portbox:hover .footy{
-  animation: Begone 300ms ease;
-  animation-fill-mode: forwards;
+ animation: SlideDown 350ms ease;
+ animation-fill-mode: forwards;
+}
+
+.portbox:hover .ending{
+  animation: Begone 400ms ease;
 }
 
 .homeaudio{
