@@ -330,9 +330,9 @@ span{
   opacity: 1;
 }
 
-.portbox:hover + footer{
+.portbox:hover .footer{
   animation: Begone 500ms ease;
-  /*animation-fill-mode: forwards; */
+  animation-fill-mode: forwards; 
 }
 
 footer{
