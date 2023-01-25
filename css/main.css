@@ -276,6 +276,24 @@ span{
   border-radius: 1em;
 }
 
+/*Footer CSS */
+
+.footy{
+  pointer-events: auto;  
+  color: var(--clr-yellow);
+  font-family: 'Sparrow';
+  animation: fadeIn 5s;
+  text-align: center;
+}
+
+footer{
+  position: fixed;
+  bottom: 100;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
 /* All the Portbox Dealings */
 
 .portbox:hover .bg{
@@ -285,7 +303,7 @@ span{
 }
 
 .portbox:hover .front{
-  transform: translateY(-69%) scale(.75);
+  transform: translateY(-73%) scale(.70);
 }
 
 .portbox:hover .about_myself{
@@ -307,25 +325,8 @@ span{
 }
 
 .portbox:hover .footy{
-  transform: scale(0);
-}
-
-
-/*Footer CSS */
-
-.footy{
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  pointer-events: auto;
-  margin: 2em;
-  color: var(--clr-yellow);
-  font-family: 'Sparrow';
-  animation: fadeIn 5s;
-  text-align: center;
+  animation: Begone 300ms ease;
+  animation-fill-mode: forwards;
 }
 
 .homeaudio{
