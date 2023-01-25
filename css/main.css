@@ -51,6 +51,7 @@ body{
   cursor: none;
 }
 
+/*Cursor CSS */
 .cursor_round{
   width: 10px;
   height: 10px;
@@ -59,6 +60,7 @@ body{
   z-index: 4;
 }
 
+/*BG CSS*/
 .coloring{
   display: grid;
   place-items: center;
@@ -330,7 +332,7 @@ span{
 
 .portbox:hover + footer{
   animation: Begone 500ms ease;
-  animation-fill-mode: forwards;
+  /*animation-fill-mode: forwards; */
 }
 
 footer{
