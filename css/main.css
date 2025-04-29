@@ -54,7 +54,7 @@
   display: grid;
   place-items: center;
   background-image: var(--clr-gradient2);
-  background-size: 400%;
+  background-size: 900%;
   pointer-events: none;
   z-index: 9;
   animation: fadeIn 2s linear, bg-move 25s infinite alternate;
