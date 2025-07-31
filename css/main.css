@@ -339,6 +339,11 @@ footer{
   animation-fill-mode: forwards;
 }
 
+.portbox:hover .myface{
+  animation: Begone 500ms ease;
+  animation-fill-mode: forwards;
+}
+
 .portbox:hover .behind{
   transition: opacity 400ms linear;
   opacity: 1;
