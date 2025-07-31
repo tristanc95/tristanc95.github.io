@@ -346,6 +346,7 @@ footer{
 .portbox:hover .behind{
   transition: opacity 400ms linear;
   opacity: 1;
+  transform: translateY(-15%);
 }
 
 .portbox:hover .footy{
